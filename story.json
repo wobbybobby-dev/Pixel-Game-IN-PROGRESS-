@@ -1,0 +1,71 @@
+{
+  "start": {
+	"text": "As you enter the forest, there are two paths before you.",
+	"choices": [
+	  {"text": "Go LEFT", "input": "L", "next": "scene_L1"},
+	  {"text": "Go RIGHT", "input": "R", "next": "ending1"}
+	]
+  },
+
+  "scene_L1": {
+	"text": "You choose the left path. The path forks again.",
+	"choices": [
+	  {"text": "Go LEFT", "input": "L", "next": "scene_L2"},
+	  {"text": "Go RIGHT", "input": "R", "next": "ending2"}
+	]
+  },
+
+  "scene_L2": {
+	"text": "You choose the left path. The path forks again.",
+	"choices": [
+	  {"text": "Go LEFT", "input": "L", "next": "ending3"},
+	  {"text": "Go RIGHT", "input": "R", "next": "scene_L3"}
+	]
+  },
+
+  "scene_L3": {
+	"text": "The path splits into STRAIGHT and LEFT.",
+	"choices": [
+	  {"text": "Go STRAIGHT", "input": "S", "next": "scene_L4"},
+	  {"text": "Go LEFT", "input": "L", "next": "ending4"}
+	]
+  },
+
+  "scene_L4": {
+	"text": "The path forks again.",
+	"choices": [
+	  {"text": "Go LEFT", "input": "L", "next": "ending5"},
+	  {"text": "Go RIGHT", "input": "R", "next": "ending6"}
+	]
+  },
+
+  "ending1": {
+	"text": "You fall into a pit and die.",
+	"ending": "PITFALL"
+  },
+
+  "ending2": {
+	"text": "You get lost and are killed by a bear.",
+	"ending": "LOST"
+  },
+
+  "ending3": {
+	"text": "You sink into mud and die.",
+	"ending": "SINKING MUD"
+  },
+
+  "ending4": {
+	"text": "You are shot by goblins.",
+	"ending": "SHOT TO DEATH"
+  },
+
+  "ending5": {
+	"text": "You escape after solving questions.",
+	"ending": "ESCAPE"
+  },
+
+  "ending6": {
+	"text": "You find treasure and rule the goblins.",
+	"ending": "TREASURE"
+  }
+}
