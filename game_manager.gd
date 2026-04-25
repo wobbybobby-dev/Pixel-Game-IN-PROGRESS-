@@ -69,7 +69,6 @@ func load_scene(scene_id):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#temporary, to be modfified
 	if waiting_for_choice:
 		if Input.is_action_just_pressed("ui_left"):
 			select_choice(0)
