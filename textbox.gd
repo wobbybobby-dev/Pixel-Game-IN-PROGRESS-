@@ -6,9 +6,9 @@ const CHAR_READ_RATE = 0.05
 var tween: Tween
 
 @onready var textbox_container = $TextboxContainer
-@onready var start_symbol = $TextboxContainer/MarginContainer/HBoxContainer/Start
-@onready var end_symbol = $TextboxContainer/MarginContainer/HBoxContainer/end
-@onready var label = $TextboxContainer/MarginContainer/HBoxContainer/Label2
+@onready var label = $TextboxContainer/MarginContainer/VBoxContainer/DialogueRow/Label2
+@onready var start_symbol = $TextboxContainer/MarginContainer/VBoxContainer/DialogueRow/Start
+@onready var end_symbol = $TextboxContainer/MarginContainer/VBoxContainer/DialogueRow/end
 
 
 func _ready() -> void:
@@ -41,7 +41,6 @@ func _process(delta: float) -> void:
 				if !text_queue.is_empty():
 					change_state(State.READY)
 				else:
-					hide_textbox()
 					emit_signal("dialogue_finished")
 
 func queue_text(next_text):
